@@ -86,6 +86,8 @@ static NSTimeInterval const MFDefaultAnimationDuration = 0.3;
 
     self.errorColor = [UIColor mf_redColor];
     self.errorFont = [self defaultErrorFont];
+    
+    self.showAlwaysPlaceholderInTop = NO;
 }
 
 - (void)setupTextField
@@ -297,6 +299,10 @@ static NSTimeInterval const MFDefaultAnimationDuration = 0.3;
 
 - (BOOL)shouldShowPlaceholder
 {
+    if (self.showAlwaysPlaceholderInTop) {
+        return YES;
+    }
+    
     BOOL isEmpty = self.text.length == 0;
 
     return !isEmpty || (self.placeholderAnimatesOnFocus && self.isFirstResponder);

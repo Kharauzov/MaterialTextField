@@ -88,4 +88,10 @@ IB_DESIGNABLE
  */
 @property (nonatomic) IBInspectable CGSize errorPadding;
 
+/**
+ * Show placeHolder in top of view even in case, when text is empty.
+ * Default is NO.
+ */
+@property (nonatomic) BOOL showAlwaysPlaceholderInTop;
+
 @end

@@ -48,6 +48,7 @@ NSInteger const MFDemoErrorCode = 100;
     self.textField2.textColor = [UIColor mf_veryDarkGrayColor];
     self.textField2.defaultPlaceholderColor = [UIColor mf_darkGrayColor];
     self.textField2.placeholderAnimatesOnFocus = YES;
+    self.textField2.showAlwaysPlaceholderInTop = YES;
 
     UIFontDescriptor * fontDescriptor = [self.textField2.font.fontDescriptor fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
     UIFont *font = [UIFont fontWithDescriptor:fontDescriptor size:self.textField2.font.pointSize];
